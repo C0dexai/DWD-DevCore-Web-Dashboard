@@ -1,0 +1,6 @@
+{
+  "name": "DWD-DevCore Web Dashboard",
+  "description": "A comprehensive dashboard for managing web development projects, interacting with dev agents, and visualizing build data, inspired by modern development platforms.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

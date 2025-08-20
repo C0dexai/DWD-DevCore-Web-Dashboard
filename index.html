@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevCore Web Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-dark': '#101010',
+              'brand-surface': '#171717',
+              'brand-bg': 'rgba(23, 23, 23, 0.7)',
+              'neon-blue': '#3b82f6',
+              'neon-purple': '#a855f7',
+              'neon-pink': '#ec4899',
+              'neon-green': '#4ade80',
+            },
+            boxShadow: {
+              'neon-glow-blue': '0 0 5px rgba(59, 130, 246, 0.8), 0 0 15px rgba(59, 130, 246, 0.5)',
+              'neon-glow-purple': '0 0 5px rgba(168, 85, 247, 0.8), 0 0 15px rgba(168, 85, 247, 0.5)',
+              'neon-glow-pink': '0 0 5px rgba(236, 72, 153, 0.8), 0 0 15px rgba(236, 72, 153, 0.5)',
+              'neon-glow-green': '0 0 5px rgba(74, 222, 128, 0.8), 0 0 15px rgba(74, 222, 128, 0.5)',
+            },
+            keyframes: {
+              'orb-glow': {
+                '0%, 100%': { boxShadow: '0 0 12px #ec4899bb, 0 0 22px #ec489977' },
+                '25%': { boxShadow: '0 0 12px #a855f7bb, 0 0 22px #a855f777' },
+                '50%': { boxShadow: '0 0 12px #3b82f6bb, 0 0 22px #3b82f677' },
+                '75%': { boxShadow: '0 0 12px #4ade80bb, 0 0 22px #4ade8077' },
+              }
+            },
+            animation: {
+                'orb-glow': 'orb-glow 8s linear infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      ::-webkit-scrollbar { width: 5px; height: 5px; }
+      ::-webkit-scrollbar-track { background: #101010; }
+      ::-webkit-scrollbar-thumb { background: #fff; border-radius: 99px; box-shadow: 0 0 2px #fff, 0 0 5px #fff; }
+      .text-glow { text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.9.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.525.0",
+    "recharts": "https://esm.sh/recharts@^3.1.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-dark text-gray-200">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
